@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 5vh;
+}
+
+body{
+    background-color: gainsboro;
+    padding: 5px;
+}
+
+.inputFile{
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    width:100%;
+    margin-bottom:10px;
+}
+.inputFile::file-selector-button{
+    background-color: gray;
+    border-radius: 5px;
+    border: 0px;
+}
+.inputFile::file-selector-button:hover{
+    background-color: red;
+}
+
+details {
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+details > summary{
+    background-color: gray;
+    padding: 10px;
+}
+
+details[open] > summary{
+    background-color: red;
+    border-radius: 5px;
+}
+
+details div {
+    padding: 10px;
+}
+
+details label{
+    display: inline;
+}
+details input{
+    width: 5vw;
+}
+#questionField,#answerField{
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+button{
+   background-color: gray;
+   border: 1px solid #000;
+   border-radius: 5px;
+   margin-bottom: 10px;
+   width: 49.7%;
+}
+
+button:hover{
+    background-color: red;
+}
+
+textarea{
+    border-radius: 5px;
+    width: 32.63vw;
+}
+
+

@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>好好学</title>
+    <link rel="icon" href="Icon.png" type="image/png" />
+    <link rel="stylesheet" href="/Style.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+  </head>
+  <body>
+    <div class="inputFileContainer">
+        <input type="file" id="inputFile" class="inputFile" accept=".xlsx" />
+    </div>
+    <details>
+        <summary>Настройки</summary>
+        <div>
+            <label>Столбец слова:</label>
+            <input id="wordColumn" value="A"/>
+            <label>Стобец подсказки:</label>
+            <input id="hintColumn" value="B"/>
+            <label>Столбец перевода:</label>
+            <input id="translationColumn" value="C"/>
+            <label>Начать со строки:</label>
+            <input id="startRow" value="1"/>
+            <label>Закончить на строке:</label>
+            <input id="endRow" value="1"/>
+        </div>
+    </details>
+    <textarea readonly id="questionField" placeholder="Вопрос"></textarea>
+    <button id="hintButton">Подсказка</button>
+    <button id="dontKnowButton">Не знаю</button>
+    <textarea  id="answerField" placeholder="Ответ"></textarea>
+    <label>Ошибки:</label>
+    <div class="fieldsContainer">
+        <textarea readonly id="wordsField"></textarea>
+        <textarea readonly id="hintsField"></textarea>
+        <textarea readonly id="translationsField"></textarea>
+    </div>
+    <script src="/Script.js"></script>
+  </body>
+</html>
