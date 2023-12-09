@@ -23,9 +23,12 @@ body{
     border-radius: 5px;
     border: 0px;
     height: 10vh;
+    font-size: 5vh;
+    color: black;
 }
 .inputFile::file-selector-button:hover{
     background-color: red;
+   
 }
 
 details {

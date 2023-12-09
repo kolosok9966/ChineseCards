@@ -23,12 +23,14 @@ class Word {
   }
 }
 
-const wordsArray = [];
+var wordsArray = [];
 var counter=0;
 
 inputFile.addEventListener("change", function (e) {
   var file = e.target.files[0];
   if (file) {
+    counter=0;
+    wordsArray=[];
     var reader = new FileReader();
     reader.onload = function (e) {
       var data = new Uint8Array(e.target.result);
@@ -39,7 +41,7 @@ inputFile.addEventListener("change", function (e) {
       var hint="";
       var translation="";
       var i=startRow.value;
-      while (i<=endRow) {
+      while (parseInt(i)<=parseInt(endRow.value)) {
         word = worksheet[wordColumn.value+i] ? worksheet[wordColumn.value + i].v : "";;
         hint = worksheet[hintColumn.value+i]  ? worksheet[hintColumn.value + i].v : "";;
         translation = worksheet[translationColumn.value+i]  ? worksheet[translationColumn.value + i].v : "";;
@@ -62,10 +64,10 @@ function StartRound() {
       StartRound();
     }
     else{
-    questionField.value = counter+1+"/"+wordsArray.length + " "+ wordsArray[counter].translation;
+    questionField.value = counter+parseInt(startRow.value)+"/"+parseInt(endRow.value)+ " "+ wordsArray[counter].translation;
     }
   } else {
-    questionField.value = "Игра закончилась"+ counter;
+    questionField.value = "Игра закончилась";
   }
 }
 
